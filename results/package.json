@@ -1,0 +1,12 @@
+{
+  "name": "results-processer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "results.js",
+  "author": "The Asia Foundation",
+  "license": "MIT",
+  "dependencies": {
+    "fast-csv": "^0.6.0",
+    "myanmar-numbers": "^1.1.3"
+  }
+}
