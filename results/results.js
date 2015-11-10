@@ -120,7 +120,7 @@ function processLower() {
 		  if (conName === 'မယ်စဲ့') {
 			conName = 'မယ်စဲ';
 		  }
-		  var name = winners[c][2];
+		  var name = winners[c][2].replace(/\s/g, '').replace(/့်/g, '့်').replace(/ဉ/g, 'ဥ');
 		  var party = winners[c][3].replace(/\s/g, '').replace(/့်/g, '့်');
 		  var party_id = null;
 		  for (var pid in parties) {
@@ -136,7 +136,9 @@ function processLower() {
 		  // find match in lower house
 		  var foundCandidate = false;
 		  for (var i = 0; i < candidates.lower.length; i++) {
-			if ((conName === candidates.lower[i].constituency.name.replace('မဲဆန္ဒနယ်', '').replace('မြို့နယ်','')) && (party_id * 1 == candidates.lower[i].party_id * 1)) {
+			if ((conName === candidates.lower[i].constituency.name.replace('မဲဆန္ဒနယ်', '').replace('မြို့နယ်',''))
+			  && (party_id * 1 == candidates.lower[i].party_id * 1)
+			  && (candidates.lower[i].name.replace(/\s/g, '').replace(/့်/g, '့်').replace(/ဉ/g, 'ဥ').indexOf(name) === 0)) {
 			  foundCandidate = true;
 			  if (candidates.lower[i].votes !== votes) {
 				candidates.lower[i].votes = votes;
@@ -180,7 +182,7 @@ function processState() {
 			conName = 'မယ်စဲ';
 		  }
 		  var conNumber = winners[c][1].split('(')[1].split(')')[0];
-		  var name = winners[c][2];
+		  var name = winners[c][2].replace(/\s/g, '').replace(/့်/g, '့်').replace(/ဉ/g, 'ဥ');
 		  var party = winners[c][3].replace(/\s/g, '').replace(/့်/g, '့်');
 		  var party_id = null;
 		  for (var pid in parties) {
@@ -198,10 +200,11 @@ function processState() {
 		  for (var i = 0; i < candidates.state.length; i++) {
 			if ((conName === candidates.state[i].constituency.name.replace('မဲဆန္ဒနယ်', '').replace('မြို့နယ်',''))
 			  && (party_id * 1 == candidates.state[i].party_id * 1)
-			  && (myanmarNumbers(conNumber) === candidates.state[i].constituency.number)) {
+			  && (myanmarNumbers(conNumber) === candidates.state[i].constituency.number)
+			  && (candidates.state[i].name.replace(/\s/g, '').replace(/့်/g, '့်').replace(/ဉ/g, 'ဥ').indexOf(name) === 0)) {
 			  foundCandidate = true;
 			  if (candidates.state[i].votes !== votes) {
-			    console.log('switching votes from ' + candidates.state[i].votes + ' to ' + votes);
+			    //console.log('switching votes from ' + candidates.state[i].votes + ' to ' + votes);
 				candidates.state[i].votes = votes;
 			  }
 			  break;
