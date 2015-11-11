@@ -1,4 +1,5 @@
 var candidates = {
+  upper: require('../candidates/json/final_upper_house.json'),
   lower: require('../candidates/json/final_lower_house.json'),
   state: require('../candidates/json/final_state_house.json')
 };
@@ -120,6 +121,9 @@ function processLower() {
 		  if (conName === 'မယ်စဲ့') {
 			conName = 'မယ်စဲ';
 		  }
+		  if (conName === 'ဖားဆောင်း') {
+		    conName = 'ဖာဆောင်း';
+		  }
 		  var name = winners[c][2].replace(/\s/g, '').replace(/့်/g, '့်').replace(/ဉ/g, 'ဥ');
 		  var party = winners[c][3].replace(/\s/g, '').replace(/့်/g, '့်');
 		  var party_id = null;
@@ -151,7 +155,7 @@ function processLower() {
 		  }
 		}
 	
-		fs.writeFile('../candidates/json/final_lower_house.json', JSON.stringify(candidates.lower), function (err) {
+		fs.writeFile('../candidates/json/final_lower_house.json', JSON.stringify(candidates.lower).replace(/}},/g, "}},\n"), function (err) {
 		  if (err) {
 			throw err;
 		  }
@@ -162,7 +166,6 @@ function processLower() {
 }
 
 function processState() {
-    console.log('attempting state house');
     winners = [];
 	csv.fromPath('statehouse.csv', { delimiter: '\t' })
 	  .on('data', function(row) {
@@ -180,6 +183,9 @@ function processState() {
 		  var conName = winners[c][1].replace(/ဉ/g, 'ဥ').split('(')[0].trim();
 		  if (conName === 'မယ်စဲ့') {
 			conName = 'မယ်စဲ';
+		  }
+		  if (conName === 'ဖားဆောင်း') {
+		    conName = 'ဖာဆောင်း';
 		  }
 		  var conNumber = winners[c][1].split('(')[1].split(')')[0];
 		  var name = winners[c][2].replace(/\s/g, '').replace(/့်/g, '့်').replace(/ဉ/g, 'ဥ');
@@ -214,11 +220,68 @@ function processState() {
 		  	console.log('did not find ' + name);
 		  }
 		}
-		fs.writeFile('../candidates/json/final_state_house.json', JSON.stringify(candidates.state), function (err) {
+		fs.writeFile('../candidates/json/final_state_house.json', JSON.stringify(candidates.state).replace(/}},/g, "}},\n"), function (err) {
 		  if (err) {
 			throw err;
 		  }
 		  console.log('done with state house');
+		  processUpper();
+		});
+	  });
+}
+
+function processUpper() {
+    winners = [];
+	csv.fromPath('upperhouse.csv', { delimiter: '\t' })
+	  .on('data', function(row) {
+		if (row.length === 6) {
+		  winners.push(row.slice(1));
+		}
+	  })
+	  .on('end', function() {
+		// remove header
+		// was: [ 'State/Region Name', 'Constituency Number', 'Winning Candidate Name', 'Party/Independence', 'Total Vote Counts' ]
+		winners = winners.slice(1);
+	
+		for (var c = 0; c < winners.length; c++) {
+		  var state = winners[c][0];
+		  var conNumber = winners[c][1];
+		  var name = winners[c][2].replace(/\s/g, '').replace(/့်/g, '့်').replace(/ဉ/g, 'ဥ');
+		  var party = winners[c][3].replace(/\s/g, '').replace(/့်/g, '့်');
+		  var party_id = null;
+		  for (var pid in parties) {
+			if (parties[pid] === party || parties[pid] === party + 'ပါတီ') {
+			  party_id = pid;
+			}
+		  }
+		  if (!party_id && party !== 'တစ်သီးပုဂ္ဂလ') {
+			console.log(party);
+		  }
+		  var votes = myanmarNumbers(winners[c][4]);
+	
+		  // find match in upper house
+		  var foundCandidate = false;
+		  for (var i = 0; i < candidates.upper.length; i++) {
+			if ((party_id * 1 == candidates.upper[i].party_id * 1)
+			  && (myanmarNumbers(conNumber) === candidates.upper[i].constituency.number)
+			  && (candidates.upper[i].name.replace(/\s/g, '').replace(/့်/g, '့်').replace(/ဉ/g, 'ဥ').indexOf(name) === 0)) {
+			  foundCandidate = true;
+			  if (candidates.upper[i].votes !== votes) {
+			    //console.log('switching votes from ' + candidates.upper[i].votes + ' to ' + votes);
+				candidates.upper[i].votes = votes;
+			  }
+			  break;
+			}
+		  }
+		  if (!foundCandidate) {
+		  	console.log('did not find ' + name);
+		  }
+		}
+		fs.writeFile('../candidates/json/final_upper_house.json', JSON.stringify(candidates.upper).replace(/}},/g, "}},\n"), function (err) {
+		  if (err) {
+			throw err;
+		  }
+		  console.log('done with upper house');
 		});
 	  });
 }
