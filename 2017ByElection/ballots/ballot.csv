@@ -1,0 +1,25 @@
+file_url,description,type
+https://storage.googleapis.com/staticassets/ballots/Invalid_1.jpg,မည်သူ့အား ဆန္ဒပြုသည်ကို ဆုံးဖြတ်ရခက်သောမဲ,invalid
+https://storage.googleapis.com/staticassets/ballots/Invalid_2.jpg,မည်သူ့အား ဆန္ဒပြုသည်ကို ဆုံးဖြတ်ရခက်သောမဲ,invalid
+https://storage.googleapis.com/staticassets/ballots/Invalid_3.jpg,ဆန္ဒပြုရမည့် အကွက်ပြင်ပတွင် ဆန္ဒပြုထားသောမဲ,invalid
+https://storage.googleapis.com/staticassets/ballots/Invalid_4.jpg,စုတ်ပြဲနေသောမဲ,invalid
+https://storage.googleapis.com/staticassets/ballots/Invalid_5.jpg,မဲရုံမှူးလက်မှတ် မပါသောမဲ,invalid
+https://storage.googleapis.com/staticassets/ballots/Invalid_6.jpg,လုံးဝ ဆန္ဒပြုမထားသောမဲ,invalid
+https://storage.googleapis.com/staticassets/ballots/Invalid_7.jpg,အစွန်းအထင်းပါသောမဲ,invalid
+https://storage.googleapis.com/staticassets/ballots/Invalid_8.jpg,အမှတ်အသားပြုထားသောမဲ,invalid
+https://storage.googleapis.com/staticassets/ballots/Invalid_9.jpg,ကိုယ်စားလှယ်လောင်း တစ်ဦးထက်ပို၍ ဆန္ဒပြုထားသောမဲ,invalid
+https://storage.googleapis.com/staticassets/ballots/Invalid_10.jpg,ကိုယ်စားလှယ်လောင်း နှစ်ဦးအား ဆန္ဒပြုထားသောမဲ,invalid
+https://storage.googleapis.com/staticassets/ballots/Invalid_11.jpg,ပထမတံဆိပ်တုံးအကွက်သည် ကိုယ်စားလှယ်လောင်း တစ်ဦးအတွက် ဆန္ဒပြုထားပြီး ဒုတိယတံဆိပ်တုံးအရာ၏ (၉) ကွက်တွင် အနည်းဆုံး (၅) ကွက်သည် အခြားကိုယ်စားလှယ်လောင်းတစ်ဦး၏ အကွက်ပေါ်သို့ ကျရောက်နေသောမဲ,invalid
+https://storage.googleapis.com/staticassets/ballots/Valid_1.jpg,ကိုယ်စားလှယ်လောင်း တစ်ဦးကိုသာ ဆန္ဒပြုထားကြောင်း ထင်ရှားသည့်မဲ,valid
+https://storage.googleapis.com/staticassets/ballots/Valid_2.jpg,တံဆိပ်တုံးသည် ပြောင်းပြန် ဘေးတိုက် ဖြစ်နေသော်လည်း ကိုယ်စားလှယ်လောင်း တစ်ဦးကိုသာ ဆန္ဒပြုထားသောမဲ,valid
+https://storage.googleapis.com/staticassets/ballots/Valid_3.jpg,တံဆိပ်တုံး၏ အကွက် (၉) ကွက်တွင် အနည်းဆုံး (၅) ကွက်သည် ကိုယ်စားလှယ်လောင်းတစ်ဦး၏ အကွက်တွင်းသာ ကျရောက်သောမဲ,valid
+https://storage.googleapis.com/staticassets/ballots/Valid_4.jpg,ကိုယ်စားလှယ်လောင်း၏ အမည်ပေါ်တွင် ရိုက်နှိပ်ဆန္ဒပြုထားသောမဲ,valid
+https://storage.googleapis.com/staticassets/ballots/Valid_5.jpg,ကိုယ်စားလှယ်လောင်း၏ ပါတီ/အမှတ်တံဆိပ် ပေါ်တွင် ရိုက်နှိပ်ထားသောမဲ,valid
+https://storage.googleapis.com/staticassets/ballots/Valid_6.jpg,ကိုယ်စားလှယ်လောင်း တစ်ဦးကိုသာ ဆန္ဒပြုထားကြောင်း ထင်ရှားသည့်မဲ,valid
+https://storage.googleapis.com/staticassets/ballots/Valid_7.jpg,ကိုယ်စားလှယ်လောင်း တစ်ဦးကိုသာ ဆန္ဒပြုထားကြောင်း ထင်ရှားသည့်မဲ,valid
+https://storage.googleapis.com/staticassets/ballots/Valid_8.jpg,ကိုယ်စားလှယ်လောင်း တစ်ဦးကိုသာ ဆန္ဒပြုထားကြောင်း ထင်ရှားသည့်မဲ,valid
+https://storage.googleapis.com/staticassets/ballots/Valid_9.jpg,တံဆိပ်တုံး တစ်ကြိမ်နှင့်အထက် ရိုက်နှိပ်ထားသော်လည်း ကိုယ်စားလှယ်လောင်း တစ်ဦးကိုသာ ဆန္ဒပြုထားသောမဲ,valid
+https://storage.googleapis.com/staticassets/ballots/Valid_10.jpg,တံဆိပ်တုံး တစ်ကြိမ်နှင့်အထက် ရိုက်နှိပ်ထားသော်လည်း ကိုယ်စားလှယ်လောင်း တစ်ဦးကိုသာ ဆန္ဒပြုထားသောမဲ,valid
+https://storage.googleapis.com/staticassets/ballots/Valid_11.jpg,တံဆိပ်တုံး တစ်ကြိမ်နှင့်အထက် ရိုက်နှိပ်ထားသော်လည်း ကိုယ်စားလှယ်လောင်း တစ်ဦးကိုသာ ဆန္ဒပြုထားသောမဲ,valid
+https://storage.googleapis.com/staticassets/ballots/Valid_12.jpg,တံဆိပ်တုံး တစ်ကြိမ်နှင့်အထက် ရိုက်နှိပ်ထားသော်လည်း ကိုယ်စားလှယ်လောင်း တစ်ဦးကိုသာ ဆန္ဒပြုထားသောမဲ,valid
+https://storage.googleapis.com/staticassets/ballots/Valid_13.jpg,ပထမတံဆိပ်တုံးအကွက်သည် ကိုယ်စားလှယ်လောင်း တစ်ဦးအတွက် ဆန္ဒပြုထားပြီး ဒုတိယတံဆိပ်တုံးအရာ၏ (၉) ကွက်တွင် အနည်းဆုံး (၅) ကွက်သည် ယင်းကိုယ်စားလှယ်လောင်း၏ အကွက်အတွင်း၌သာ ကျရောက်သောမဲ,valid
