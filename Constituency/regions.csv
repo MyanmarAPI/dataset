@@ -1,0 +1,19 @@
+region_pcode_idx,name_en,name_mm,region_pcode,type
+1,Kachin,ကချင်ပြည်နယ်,MMR001,state
+2,Kayah,ကယားပြည်နယ်,MMR002,state
+3,Kayin,ကရင်ပြည်နယ်,MMR003,state
+4,Chin,ချင်းပြည်နယ်,MMR004,state
+5,Sagaing,စစ်ကိုင်းတိုင်းဒေသကြီး,MMR005,division
+6,Tanintharyi,တနင်္သာရီတိုင်းဒေသကြီး,MMR006,division
+7,Bago (East),ပဲခူးတိုင်းဒေသကြီး (အရှေ့),MMR007,division
+8,Bago (West),ပဲခူးတိုင်းဒေသကြီး (အနောက်),MMR008,division
+9,Magway,မကွေးတိုင်းဒေသကြီး,MMR009,division
+10,Mandalay,မန္တလေးတိုင်းဒေသကြီး,MMR010,division
+11,Mon,မွန်ပြည်နယ်,MMR011,state
+12,Rakhine,ရခိုင်ပြည်နယ်,MMR012,state
+13,Yangon,ရန်ကုန်တိုင်းဒေသကြီး,MMR013,division
+14,Shan (South),ရှမ်းပြည်နယ် (တောင်),MMR014,state
+15,Shan (North),ရှမ်းပြည်နယ် (မြောက်),MMR015,state
+16,Shan (East),ရှမ်းပြည်နယ် (အရှေ့),MMR016,state
+17,Ayeyarwady,ဧရာဝတီတိုင်းဒေသကြီး,MMR017,division
+18,Nay Pyi Taw,နေပြည်တော်,MMR018,union_territory
